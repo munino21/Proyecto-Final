@@ -55,7 +55,7 @@ header {
         align-items: center;
         width: 100%;
         text-align: center;
-        margin-left: 80px; // Ajustar según el tamaño del logo
+        margin-left: 80px; 
 
         .bienvenida {
             display: flex;
@@ -78,7 +78,7 @@ header {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(0, 0, 0, 0.4); // Sombra para mejorar el contraste
+                background: rgba(0, 0, 0, 0.4); 
                 z-index: 0;
             }
         
@@ -99,7 +99,7 @@ header {
         
                 p {
                     font-size: 1.2rem;
-                    color: lighten($text-inicio, 15%); // Aumentar contraste
+                    color: lighten($text-inicio, 15%); 
                 }
             }
         
@@ -369,7 +369,7 @@ footer {
             }
 
             i {
-                font-size: 2rem; // Tamaño del ícono
+                font-size: 2rem; 
             }
         }
     }
