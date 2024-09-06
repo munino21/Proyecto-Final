@@ -1,0 +1,381 @@
+$primary-color: #e58e26;
+$secondary-color: #30336b;
+$background-color: #f6e58d;
+$text-color: #2d3436;
+$card-background: #ffffff;
+$card-shadow: rgba(0, 0, 0, 0.1);
+$text-inicio: rgb(43, 220, 217);
+
+$font-family: 'Arial', sans-serif;
+$heading-font-size: 2rem;
+$body-font-size: 1rem;
+
+$padding: 20px;
+$margin: 15px;
+$border-radius: 5px;
+$button-padding: 10px 20px;
+
+$image-height: 200px;
+
+body {
+    font-family: $font-family;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: $secondary-color;
+    padding: $padding;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .logo-link {
+        display: block;
+        position: absolute;
+        top: $padding;
+        left: $padding;
+        z-index: 1;
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+    }
+
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        margin-left: 80px; // Ajustar según el tamaño del logo
+
+        .bienvenida {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            text-align: center;
+            padding: $padding;
+            background-image: url('./assets/Imagen de WhatsApp 2024-09-03 a las 21.44.29_9c7c1906.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.4); // Sombra para mejorar el contraste
+                z-index: 0;
+            }
+        
+            .contenido, .nosotros {
+                position: relative;
+                z-index: 1;
+                color: $text-inicio;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            }
+        
+            .nosotros {
+                margin-top: $margin;
+        
+                h2 {
+                    font-size: $heading-font-size;
+                    margin-bottom: $margin;
+                }
+        
+                p {
+                    font-size: 1.2rem;
+                    color: lighten($text-inicio, 15%); // Aumentar contraste
+                }
+            }
+        
+            .boton {
+                background-color: $primary-color;
+                color: white;
+                padding: $button-padding;
+                border: none;
+                border-radius: $border-radius;
+                font-size: 1rem;
+                text-decoration: none;
+                text-align: center;
+                display: inline-block;
+                transition: background-color 0.3s ease;
+        
+                &:hover {
+                    background-color: darken($primary-color, 10%);
+                }
+            }
+        }
+
+        }
+        h1 {
+            color: white;
+            font-size: $heading-font-size;
+            margin: 0;
+        }
+
+        nav {
+            margin-top: $margin;
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+
+                li {
+                    margin: 0 $margin;
+
+                    a {
+                        color: $primary-color;
+                        text-decoration: none;
+                        font-size: 1.2rem;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+.contacto, .sabores {
+    padding: $padding;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: $secondary-color;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        .logo-link {
+            position: static;
+            margin-bottom: $margin;
+        }
+        .header-content {
+            margin-left: 0;
+        }
+    }
+}
+
+.bienvenida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: $padding;
+    background-image: url('./assets/Imagen de WhatsApp 2024-09-03 a las 21.44.29_9c7c1906.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 0;
+    }
+
+    h2, p {
+        position: relative;
+        color: $text-inicio;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+        font-size: $heading-font-size;
+        margin-bottom: $margin;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: $margin;
+    }
+
+    .boton {
+        background-color: $primary-color;
+        color: white;
+        padding: $button-padding;
+        border: none;
+        border-radius: $border-radius;
+        font-size: 1rem;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+.sabores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: $padding;
+    gap: $margin;
+
+    .card {
+        background-color: $card-background;
+        box-shadow: 0px 4px 8px $card-shadow;
+        border-radius: $border-radius;
+        overflow: hidden;
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+
+        img {
+            width: 100%;
+            height: $image-height;
+            object-fit: cover;
+        }
+
+        h3 {
+            color: $secondary-color;
+            font-size: 1.5rem;
+            margin: $margin 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 0 0 $margin;
+            color: $primary-color;
+        }
+
+        button {
+            background-color: $primary-color;
+            color: white;
+            border: none;
+            padding: $button-padding;
+            border-radius: $border-radius;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: darken($primary-color, 10%);
+            }
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.contacto {
+    padding: $padding;
+    max-width: 600px;
+    margin: 0 auto;
+
+    h2 {
+        color: $secondary-color;
+        font-size: $heading-font-size;
+        margin-bottom: $margin;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-size: $body-font-size;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            margin-bottom: $margin;
+            padding: 10px;
+            border: 1px solid $text-color;
+            border-radius: $border-radius;
+            font-size: $body-font-size;
+        }
+
+        button {
+            background-color: $primary-color;
+            color: white;
+            border: none;
+            padding: $button-padding;
+            border-radius: $border-radius;
+            font-size: $body-font-size;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: darken($primary-color, 10%);
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $secondary-color;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+
+        a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $primary-color;
+            }
+
+            i {
+                font-size: 2rem; // Tamaño del ícono
+            }
+        }
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+}

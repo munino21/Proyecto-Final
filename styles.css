@@ -1,0 +1,322 @@
+body {
+  font-family: "Arial", sans-serif;
+  color: #2d3436;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background-color: #30336b;
+  padding: 20px;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+header .logo-link {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+header .logo-link .logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+header .header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin-left: 80px;
+}
+header .header-content .bienvenida {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 20px;
+  background-image: url("./assets/Imagen de WhatsApp 2024-09-03 a las 21.44.29_9c7c1906.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+header .header-content .bienvenida::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+header .header-content .bienvenida .contenido, header .header-content .bienvenida .nosotros {
+  position: relative;
+  z-index: 1;
+  color: rgb(43, 220, 217);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+header .header-content .bienvenida .nosotros {
+  margin-top: 15px;
+}
+header .header-content .bienvenida .nosotros h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+header .header-content .bienvenida .nosotros p {
+  font-size: 1.2rem;
+  color: #6de7e5;
+}
+header .header-content .bienvenida .boton {
+  background-color: #e58e26;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+header .header-content .bienvenida .boton:hover {
+  background-color: #c17417;
+}
+header h1 {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
+header nav {
+  margin-top: 15px;
+}
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+header nav ul li {
+  margin: 0 15px;
+}
+header nav ul li a {
+  color: #e58e26;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.contacto, .sabores {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #30336b;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  header .logo-link {
+    position: static;
+    margin-bottom: 15px;
+  }
+  header .header-content {
+    margin-left: 0;
+  }
+}
+.bienvenida {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 20px;
+  background-image: url("./assets/Imagen de WhatsApp 2024-09-03 a las 21.44.29_9c7c1906.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.bienvenida::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+.bienvenida h2, .bienvenida p {
+  position: relative;
+  color: rgb(43, 220, 217);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.bienvenida h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.bienvenida p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+.bienvenida .boton {
+  background-color: #e58e26;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+.bienvenida .boton:hover {
+  background-color: #c17417;
+}
+
+.sabores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 15px;
+}
+.sabores .card {
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+.sabores .card img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sabores .card h3 {
+  color: #30336b;
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+.sabores .card p {
+  font-size: 1.2rem;
+  margin: 0 0 15px;
+  color: #e58e26;
+}
+.sabores .card button {
+  background-color: #e58e26;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.sabores .card button:hover {
+  background-color: #c17417;
+}
+.sabores .card:hover {
+  transform: scale(1.05);
+}
+
+.contacto {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contacto h2 {
+  color: #30336b;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+.contacto form {
+  display: flex;
+  flex-direction: column;
+}
+.contacto form label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.contacto form input, .contacto form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #2d3436;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.contacto form button {
+  background-color: #e58e26;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contacto form button:hover {
+  background-color: #c17417;
+}
+
+footer {
+  background-color: #30336b;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+footer .social-media {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+footer .social-media a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+footer .social-media a:hover {
+  color: #e58e26;
+}
+footer .social-media a i {
+  font-size: 2rem;
+}
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}/*# sourceMappingURL=styles.css.map */
