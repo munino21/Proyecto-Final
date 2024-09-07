@@ -159,12 +159,31 @@ header {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 footer {
     background-color: $secondary-color;
+    color: white;
     text-align: center;
     padding: 10px;
-    color: white;
+    width: 100%;
+    margin-top: auto;
+
+    .social-media {
+        a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: lighten($secondary-color, 20%);
+            }
+        }
+    }
+}
+
+.footer-contacto{
+    margin-top: 130px;
+
 }
 
 @media (max-width: 768px) {
@@ -366,18 +385,4 @@ footer {
     }
 }
 
-footer {
-    background-color: $secondary-color;
-    color: white;
-    padding: 10px;
-
-    .social-media {
-        a {
-            color: white;
-            margin: 0 10px;
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-        }
-    }
-}
 
