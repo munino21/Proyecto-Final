@@ -30,43 +30,64 @@
             <img src="../assets/carne.webp" alt="Empanada de Carne">
             <h3>Carne</h3>
             <p>$150</p>
-            <button>Pedir</button>
+            <button class="accordion">Ver más</button>
+            <div class="panel">
+                <p>Empanada clásica de carne vacuna con cebolla, huevo y especias.</p>
+            </div>
         </div>
         <div class="card">
             <img src="../assets/pollo.webp" alt="Empanada de Pollo">
             <h3>Pollo</h3>
             <p>$150</p>
-            <button>Pedir</button>
+            <button class="accordion">Ver más</button>
+            <div class="panel">
+                <p>Delicioso pollo con cebolla y morrón, con un toque de especias.</p>
+            </div>
         </div>
         <div class="card">
             <img src="../assets/verdura.webp" alt="Empanada de Verdura">
             <h3>Verdura</h3>
             <p>$150</p>
-            <button>Pedir</button>
+            <button class="accordion">Ver más</button>
+            <div class="panel">
+                <p>Mezcla de espinacas y acelga con ricota, ideal para vegetarianos.</p>
+            </div>
         </div>
         <div class="card">
             <img src="../assets/cebolla.webp" alt="Empanada de Cebolla">
             <h3>Cebolla</h3>
             <p>$150</p>
-            <button>Pedir</button>
+            <button class="accordion">Ver más</button>
+            <div class="panel">
+                <p>Empanada de cebolla caramelizada con queso, suave y deliciosa.</p>
+            </div>
         </div>
         <div class="card">
             <img src="../assets/caprese.webp" alt="Empanada Caprese">
             <h3>Caprese</h3>
             <p>$150</p>
-            <button>Pedir</button>
+            <button class="accordion">Ver más</button>
+            <div class="panel">
+                <p>Tomate, albahaca y mozzarella, un clásico mediterráneo.</p>
+            </div>
         </div>
         <div class="card">
             <img src="../assets/jqy.webp" alt="Empanada de Jamón y Queso">
             <h3>Jamón y Queso</h3>
             <p>$150</p>
-            <button>Pedir</button>
+            <button class="accordion">Ver más</button>
+            <div class="panel">
+                <p>La clásica combinación de jamón y queso, ideal para todos los gustos.</p>
+            </div>
         </div>
         <div class="card">
             <img src="../assets/humita.webp" alt="Empanada de Humita">
             <h3>Humita</h3>
             <p>$150</p>
-            <button>Pedir</button>
+            <button class="accordion">Ver más</button>
+            <div class="panel">
+                <p>Empanada rellena de choclo cremoso con un toque de queso.</p>
+            </div>
         </div>
     </section>
 
@@ -83,7 +104,21 @@
             </a>
         </div>
     </footer>
-    
+
+    <script>
+        const accordions = document.querySelectorAll(".accordion");
+        accordions.forEach((accordion) => {
+            accordion.addEventListener("click", function() {
+                this.classList.toggle("active");
+                const panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
-
